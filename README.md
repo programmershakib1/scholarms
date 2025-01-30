@@ -6,7 +6,7 @@ ScholarMS is a comprehensive platform that simplifies the scholarship applicatio
 
 ---
 
-## [Visit The Site](https://assignment-12-batch-10.netlify.app)
+## [Visit The Site](https://scholarms.netlify.app)
 
 ---
 

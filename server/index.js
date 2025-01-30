@@ -14,6 +14,7 @@ app.use(
       "http://localhost:5173",
       "http://localhost:5174",
       "http://localhost:5175",
+      "https://scholarms.netlify.app",
       "https://assignment-12-batch-10.netlify.app",
     ],
     credentials: true,
