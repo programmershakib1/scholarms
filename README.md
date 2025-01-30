@@ -10,7 +10,7 @@ ScholarMS is a comprehensive platform that simplifies the scholarship applicatio
 
 ---
 
-## Key Features
+## Key Features (Client)
 
 ### **User Interface**
 
@@ -51,7 +51,47 @@ ScholarMS is a comprehensive platform that simplifies the scholarship applicatio
 - Tailwind CSS and DaisyUI provide a modern, clean, and responsive design.
 - Framer Motion and Lottie animations for enhanced interactivity and smooth transitions.
 
+### **Authentication & Authorization**
+
+- Secure user login and registration powered by Firebase Authentication.
+- JWT-based authentication to protect private routes and secure user sessions.
+
+### **User Management**
+
+- Different user roles: Users, Moderators, and Admins.
+- Users can view and apply for scholarships, and view their application history.
+- Admins and Moderators have the ability to manage scholarship data, user roles, and applications.
+
+### **Scholarship Management**
+
+- Admins can create, update, and delete scholarship opportunities.
+- Scholarship data is stored in MongoDB and can be easily accessed and filtered.
+
+### **Application Management**
+
+- Users can apply for scholarships directly from the platform.
+- Admins and Moderators can approve, reject, or view application statuses.
+
+### **Review System**
+
+- Moderators and Admins can review and approve/reject scholarship applications.
+
+### **Real-time Updates**
+
+- Uses **TanStack Query** to handle API data fetching, caching, and updates in real-time.
+- Application status updates reflect immediately on the user interface.
+
+### **Database Integration**
+
+- MongoDB is used for storing all user, scholarship, and application data.
+- Efficient API calls to fetch, create, update, and delete records.
+
+### **Stripe Integration**
+
+- Payment gateway integration for any scholarship fees (if applicable) using Stripe.
+
 ---
+
 
 ## Technologies Used
 
@@ -66,6 +106,15 @@ ScholarMS is a comprehensive platform that simplifies the scholarship applicatio
 - **React Hook Form**: To manage form state and validation in a simple, easy-to-use manner.
 - **React Icons**: For adding icons to improve UI and UX.
 - **React Hot Toast**: For displaying notifications and alerts.
+- **Node.js**: The server-side runtime environment.
+- **Express.js**: Fast and minimal web framework for building RESTful APIs.
+- **MongoDB**: NoSQL database for storing scholarship data, user information, and applications.
+- **JWT (JSON Web Tokens)**: For secure user authentication and protecting private routes.
+- **Firebase**: Used for user authentication and real-time database management.
+- **Stripe**: Integrated for handling payments if there are any fees associated with applications.
+- **dotenv**: For managing environment variables securely.
+- **Cors**: For handling cross-origin resource sharing and securing API requests.
+- **axios**: For making HTTP requests to interact with external APIs and services.
 
 ---
 
@@ -87,6 +136,12 @@ ScholarMS is a comprehensive platform that simplifies the scholarship applicatio
 - **swiper**: Library for creating interactive carousels and sliders.
 - **react-countup**: For creating animated counters.
 - **react-datepicker**: For selecting dates easily in forms.
+- **express**: Fast, unopinionated, minimalist web framework for Node.js.
+- **dotenv**: Loads environment variables from a `.env` file.
+- **mongodb**: MongoDB driver to interact with the database.
+- **jsonwebtoken**: Library to create and verify JWT tokens for authentication.
+- **stripe**: Stripe API integration for handling payments.
+- **cors**: Middleware to handle CORS (Cross-Origin Resource Sharing).
 
 ---
 
