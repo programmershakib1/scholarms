@@ -178,14 +178,19 @@ To get this project up and running on your local machine, follow these steps:
 
 3. Configure the environment variables:
 
-   - Create a `.env.local` file in the root directory.
-   - Add the necessary variables for Firebase, imgbb api key, stripe public api key.
-   - 🚨 **Important:** Never expose your `.env.local` file in public repositories. Use `.gitignore` to keep it secure.
+   - Create a `.env` and `.env.local` file in the root directory server and client.
+   - Add the necessary variables for MongoDB, Firebase, JWT.
+   - 🚨 **Important:** Never expose your `.env` and `.env.local` file in public repositories. Use `.gitignore` to keep it secure.
 
-4. Start the project:
+4. Start the development server:
 
    ```bash
    npm run dev
+   ```
+
+5. Start the backend server:
+   ```bash
+   node index.js
    ```
 
 ---
