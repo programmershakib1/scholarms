@@ -1,16 +1,44 @@
-# Scholarship Management System (ScholarMS)
+# 🎓 Scholarship Management System (ScholarMS)
 
-## Purpose
+## 📌 Project Overview
 
-ScholarMS is a comprehensive platform that simplifies the scholarship application process. It allows users to search for universities and scholarships, apply for scholarships, and manage their applications. Additionally, it provides a review system for applications. It supports various user roles, such as users, moderators, and admins, each with specific permissions and access to the platform’s features.
-
----
-
-## [Visit The Site](https://scholarms.netlify.app)
+ScholarMS is a **comprehensive scholarship management platform** designed to streamline the scholarship search and application process. Users can browse scholarships, apply for them, and track their applications in real time. The platform supports **role-based access** for users, moderators, and admins, enabling efficient scholarship management.
 
 ---
 
-## Key Features (Client)
+## [🚀 Visit The Site](https://scholarms.netlify.app)
+
+---
+
+## 🛠️ Technologies Used
+
+### **Frontend:**
+
+- **React.js** – Component-based UI development
+- **React Router DOM** – Client-side routing
+- **Tailwind CSS & DaisyUI** – Modern UI design
+- **Framer Motion & Lottie React** – Smooth animations
+
+### **Backend & Database:**
+
+- **Node.js & Express.js** – Backend framework & API development
+- **MongoDB** – NoSQL database for storing application data
+
+### **Authentication & Security:**
+
+- **Firebase Authentication** – Secure user login
+- **JWT (JSON Web Tokens)** – Role-based authentication
+
+### **Other Key Technologies:**
+
+- **TanStack Query** – Efficient data fetching & caching
+- **Stripe** – Secure payment processing
+- **Axios** – API requests handling
+- **dotenv & Cors** – Environment variables & security
+
+---
+
+## ✨ Core Features
 
 ### **User Interface**
 
@@ -92,33 +120,7 @@ ScholarMS is a comprehensive platform that simplifies the scholarship applicatio
 
 ---
 
-
-## Technologies Used
-
-- **React.js**: JavaScript library for building user interfaces.
-- **React Router DOM**: For managing navigation and routing in the app.
-- **Tailwind CSS**: Utility-first CSS framework for rapid UI development.
-- **DaisyUI**: Component library for building beautiful UI with Tailwind CSS.
-- **TanStack Query**: For fetching, caching, and managing data from the server.
-- **Stripe**: For handling payment processes related to scholarship applications.
-- **Framer Motion**: For animations and transitions to enhance the user experience.
-- **Lottie React**: To integrate Lottie animations for a more engaging UI.
-- **React Hook Form**: To manage form state and validation in a simple, easy-to-use manner.
-- **React Icons**: For adding icons to improve UI and UX.
-- **React Hot Toast**: For displaying notifications and alerts.
-- **Node.js**: The server-side runtime environment.
-- **Express.js**: Fast and minimal web framework for building RESTful APIs.
-- **MongoDB**: NoSQL database for storing scholarship data, user information, and applications.
-- **JWT (JSON Web Tokens)**: For secure user authentication and protecting private routes.
-- **Firebase**: Used for user authentication and real-time database management.
-- **Stripe**: Integrated for handling payments if there are any fees associated with applications.
-- **dotenv**: For managing environment variables securely.
-- **Cors**: For handling cross-origin resource sharing and securing API requests.
-- **axios**: For making HTTP requests to interact with external APIs and services.
-
----
-
-## NPM Packages Used
+## 📦 Dependencies
 
 - **tailwindcss**: Utility-first CSS framework for designing responsive user interfaces.
 - **daisyui**: A component library built on top of Tailwind CSS for fast UI development.
@@ -145,15 +147,15 @@ ScholarMS is a comprehensive platform that simplifies the scholarship applicatio
 
 ---
 
-## Running the Project Locally
+## 🛠️ How to Run the Project Locally
 
 To get this project up and running on your local machine, follow these steps:
 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/username/project.git
-   cd project
+   git clone https://github.com/programmershakib1/scholarms.git
+   cd scholarms
    ```
 
 2. Install dependencies:
