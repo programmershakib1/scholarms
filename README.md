@@ -193,6 +193,7 @@ To get this project up and running on your local machine, follow these steps:
 ## 🔗 Live Project & Resources
 
 🌍 **Live Site:** [ScholarMS](https://scholarms.netlify.app)
+
 📂 **GitHub Repository:** [GitHub Link](https://github.com/programmershakib1/scholarms)
 
 ---
