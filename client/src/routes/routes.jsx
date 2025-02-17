@@ -50,19 +50,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/details/:id",
-        element: (
-          <PrivateRoute>
-            <ScholarshipDetails></ScholarshipDetails>
-          </PrivateRoute>
-        ),
+        element: <ScholarshipDetails></ScholarshipDetails>,
       },
       {
         path: "/specialDetails",
-        element: (
-          <PrivateRoute>
-            <SpecialDetails></SpecialDetails>
-          </PrivateRoute>
-        ),
+        element: <SpecialDetails></SpecialDetails>,
       },
       {
         path: "/specialForm",
