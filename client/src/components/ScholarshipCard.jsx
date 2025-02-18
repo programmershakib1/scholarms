@@ -37,7 +37,7 @@ const ScholarshipCard = ({ scholarship }) => {
               alt=""
             />
           </div>
-          <div className="flex gap-2 mt-5">
+          <div className="flex gap-2 mt-5 min-h-16">
             <img
               className="w-10 h-10"
               src={themeColor === "light" ? logo2 : logo}
@@ -101,7 +101,7 @@ const ScholarshipCard = ({ scholarship }) => {
                 alt=""
               />
             </div>
-            <div className="flex gap-2 mt-5">
+            <div className="flex gap-2 mt-5 min-h-16">
               <img
                 className="w-10 h-10"
                 src={themeColor === "light" ? logo2 : logo}

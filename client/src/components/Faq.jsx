@@ -20,7 +20,7 @@ const Faq = () => {
         className="flex flex-col md:flex-row items-center justify-center gap-3"
       >
         <h2 className="text-2xl font-black text-center font-row">
-          FAQs On Library Management System
+          FAQ,s On Scholarship Management System
         </h2>
         <img src={q} alt="" />
       </motion.div>

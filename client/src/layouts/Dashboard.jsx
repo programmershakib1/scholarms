@@ -155,7 +155,7 @@ const Dashboard = () => {
               }
             >
               <span className="flex items-center gap-2">
-                <i className="fa-solid fa-user"></i>
+                <i className="fa-solid fa-chart-line"></i>
                 <span>Dashboard</span>
               </span>
             </NavLink>
@@ -348,6 +348,17 @@ const Dashboard = () => {
                 <span>
                   {userInfo?.role === "admin" ? "Admin Profile" : "My Profile"}
                 </span>
+              </span>
+            </NavLink>
+            <NavLink
+              to="dashboardPage"
+              className={({ isActive }) =>
+                isActive ? "bg-black text-white p-3" : "p-3"
+              }
+            >
+              <span className="flex items-center gap-2">
+                <i className="fa-solid fa-chart-line"></i>
+                <span>Dashboard</span>
               </span>
             </NavLink>
 
