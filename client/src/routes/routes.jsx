@@ -29,6 +29,7 @@ import ModeratorRoute from "./ModeratorRoute";
 import AdminRoute from "./AdminRoute";
 import AdminAndModeratorRoute from "./AdminAndModeratorRoute";
 import SuccessClient from "../dashboard/SuccessClient";
+import DashboardPage from "../dashboard/DashboardPage";
 
 const router = createBrowserRouter([
   {
@@ -54,7 +55,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/specialDetails",
-        element: <SpecialDetails></SpecialDetails>,
+        element: (
+          <PrivateRoute>
+            <SpecialDetails></SpecialDetails>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/specialForm",
@@ -99,6 +104,14 @@ const router = createBrowserRouter([
         element: (
           <PrivateRoute>
             <Profile></Profile>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "dashboardPage",
+        element: (
+          <PrivateRoute>
+            <DashboardPage></DashboardPage>
           </PrivateRoute>
         ),
       },

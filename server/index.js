@@ -101,6 +101,65 @@ async function run() {
       next();
     };
 
+    // admin all info
+    app.get("/admin-all-info", async (req, res) => {
+      const [
+        users,
+        scholarships,
+        appliedScholarships,
+        reviews,
+        successfulApplications,
+        specialScholarships,
+      ] = await Promise.all([
+        usersCollection.find().toArray(),
+        scholarshipsCollection.find().toArray(),
+        appliedScholarshipsCollection.find().toArray(),
+        reviewsCollection.find().toArray(),
+        successfulApplicationsCollection.find().toArray(),
+        specialScholarshipsCollection.find().toArray(),
+      ]);
+
+      res.send({
+        users,
+        scholarships,
+        appliedScholarships,
+        reviews,
+        successfulApplications,
+        specialScholarships,
+      });
+    });
+
+    // user all info
+    app.get("/user-all-info/:email", async (req, res) => {
+      const email = req.params.email;
+
+      const [
+        appliedScholarship,
+        review,
+        successfulApplication,
+        specialScholarship,
+        userInfo,
+      ] = await Promise.all([
+        appliedScholarshipsCollection.find({ user_email: email }).toArray(),
+        reviewsCollection.find({ user_email: email }).toArray(),
+        successfulApplicationsCollection
+          .find({
+            applicantEmail: email,
+          })
+          .toArray(),
+        specialScholarshipsCollection.find({ user_email: email }).toArray(),
+        usersCollection.findOne({ email }),
+      ]);
+
+      res.send({
+        appliedScholarship,
+        review,
+        successfulApplication,
+        specialScholarship,
+        userInfo,
+      });
+    });
+
     // scholarship
     // get all scholarship
     app.get("/all-scholarship/:email", async (req, res) => {
@@ -215,7 +274,7 @@ async function run() {
       res.send(scholarshipsWithRatings);
     });
 
-    // all scholarship get in manage page 
+    // all scholarship get in manage page
     app.get("/manage-scholarship", verifyToken, async (req, res) => {
       const result = await scholarshipsCollection.find().toArray();
       res.send(result);
@@ -494,11 +553,13 @@ async function run() {
     });
 
     // success applications
+    // success applications get
     app.get("/success-applications", async (req, res) => {
       const result = await successfulApplicationsCollection.find().toArray();
       res.send(result);
     });
 
+    // success applications delete
     app.delete("/success-application/:id", verifyToken, async (req, res) => {
       const id = req.params.id;
 
