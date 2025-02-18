@@ -18,7 +18,7 @@ const OurSuccess = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 font-row mt-5 md:mt-10">
         <motion.div
           {...animationValue}
-          className="flex flex-col items-center shadow-xl rounded-xl py-8"
+          className="flex flex-col items-center shadow-xl rounded-xl py-8 dark:bg-c"
         >
           <i className="fa-solid fa-user text-7xl"></i>
           <CountUp
@@ -31,7 +31,7 @@ const OurSuccess = () => {
         </motion.div>
         <motion.div
           {...animationValue}
-          className="flex flex-col items-center shadow-xl rounded-xl py-8"
+          className="flex flex-col items-center shadow-xl rounded-xl py-8 dark:bg-c"
         >
           <i className="fa-solid fa-bars-progress text-7xl"></i>
           <CountUp
@@ -44,7 +44,7 @@ const OurSuccess = () => {
         </motion.div>
         <motion.div
           {...animationValue}
-          className="flex flex-col items-center shadow-xl rounded-xl py-8"
+          className="flex flex-col items-center shadow-xl rounded-xl py-8 dark:bg-c"
         >
           <i className="fa-solid fa-user-graduate text-7xl"></i>
           <CountUp

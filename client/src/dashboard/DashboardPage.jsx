@@ -104,7 +104,7 @@ const DashboardPage = () => {
     <div className="mx-5 md:mx-0">
       <h2 className="text-2xl font-bold">Welcome {user?.displayName}</h2>
       {userInfo?.role === "admin" && (
-        <div className="grid md:grid-cols-3 gap-10 mt-5">
+        <div className="grid md:grid-cols-3 gap-5 mt-5">
           <div className="border-2 p-8 rounded-xl text-2xl text-center font-row font-bold">
             <h4>All Users</h4>
             <h4 className="text-4xl mt-2">{users.length}</h4>
@@ -133,7 +133,7 @@ const DashboardPage = () => {
       )}
 
       {userInfo?.role === "user" && (
-        <div className="grid md:grid-cols-3 gap-10 mt-5">
+        <div className="grid md:grid-cols-3 gap-5 mt-5">
           <div className="border-2 p-8 rounded-xl text-2xl text-center font-row font-bold">
             <h4>Applications</h4>
             <h4 className="text-4xl mt-2">

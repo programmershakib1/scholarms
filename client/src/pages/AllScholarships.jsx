@@ -56,7 +56,7 @@ const AllScholarships = () => {
     );
 
   return (
-    <div className="mx-5 md:mx-0">
+    <div className="mx-5 md:mx-0 mt-10">
       <Helmet>
         <title>All Scholarships - ScholarMS</title>
       </Helmet>

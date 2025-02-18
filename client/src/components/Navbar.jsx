@@ -35,14 +35,20 @@ const Navbar = () => {
           </h2>
         </Link>
       </div>
-      <div className="flex items-center gap-4">
-        <div className="hidden lg:block">
-          <div className="flex gap-5 font-semibold text-p">
-            <NavLink to="/">Home</NavLink>
-            <NavLink to="/allScholarships">All Scholarships</NavLink>
-            <NavLink to="/dashboard/profile">Dashboard</NavLink>
-          </div>
+      <div className="hidden lg:block">
+        <div className="flex gap-5 font-semibold text-p">
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="/allScholarships">All Scholarships</NavLink>
+          {user && (
+            <>
+              <NavLink to="/dashboard/profile">Dashboard</NavLink>
+              <NavLink to="/specialDetails">Special Scholarship</NavLink>
+            </>
+          )}
+          <NavLink to="/contact">Contact</NavLink>
         </div>
+      </div>
+      <div className="flex items-center gap-4">
         <button onClick={toggleTheme}>
           {theme === "light" ? (
             <i className="fa-solid fa-moon text-black text-4xl"></i>
@@ -118,11 +124,25 @@ const Navbar = () => {
                 <NavLink to="/allScholarships" onClick={() => setIsOpen(false)}>
                   All Scholarships
                 </NavLink>
-                <NavLink
-                  to="/dashboard/profile"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Dashboard
+                {user && (
+                  <>
+                    {" "}
+                    <NavLink
+                      to="/dashboard/profile"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      Dashboard
+                    </NavLink>
+                    <NavLink
+                      to="/specialDetails"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      Special Scholarship
+                    </NavLink>
+                  </>
+                )}
+                <NavLink to="/contact" onClick={() => setIsOpen(false)}>
+                  Contact
                 </NavLink>
               </>
             </nav>

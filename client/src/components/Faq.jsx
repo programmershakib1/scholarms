@@ -33,7 +33,7 @@ const Faq = () => {
             {...animationValue}
             key={idx}
             tabIndex="0"
-            className="py-4 collapse collapse-arrow p-5 hover:shadow-xl"
+            className="py-4 collapse collapse-arrow p-5 hover:shadow-xl dark:bg-c"
           >
             <div className="collapse-title text-xl font-medium">
               <h1>{question.question}</h1>

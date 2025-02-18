@@ -30,6 +30,7 @@ import AdminRoute from "./AdminRoute";
 import AdminAndModeratorRoute from "./AdminAndModeratorRoute";
 import SuccessClient from "../dashboard/SuccessClient";
 import DashboardPage from "../dashboard/DashboardPage";
+import Contact from "../pages/Contact";
 
 const router = createBrowserRouter([
   {
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
       {
         path: "/allScholarships",
         element: <AllScholarships></AllScholarships>,
+      },
+      {
+        path: "/contact",
+        element: <Contact></Contact>,
       },
       {
         path: "/successfulClient",
