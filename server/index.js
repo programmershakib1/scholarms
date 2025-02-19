@@ -555,7 +555,10 @@ async function run() {
     // success applications
     // success applications get
     app.get("/success-applications", async (req, res) => {
-      const result = await successfulApplicationsCollection.find().toArray();
+      const result = await successfulApplicationsCollection
+        .find()
+        .sort({ _id: -1 })
+        .toArray();
       res.send(result);
     });
 
@@ -572,7 +575,7 @@ async function run() {
     // reviews
     // get all reviews
     app.get("/reviews", async (req, res) => {
-      const result = await reviewsCollection.find().toArray();
+      const result = await reviewsCollection.find().sort({ _id: -1 }).toArray();
       res.send(result);
     });
 
