@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { Typewriter } from "react-simple-typewriter";
 import useAuth from "../hooks/useAuth";
 import { motion } from "framer-motion";
 import library from "../assets/lottie/about.json";
@@ -17,18 +16,7 @@ const About = () => {
         {...animationValue}
         className="text-5xl font-bold min-h-52 md:min-h-28 lg:min-h-20"
       >
-        <Typewriter
-          words={[
-            "Welcome to Scholarship Management System",
-            "Explore Scholarship Management System",
-          ]}
-          loop={0}
-          cursor
-          cursorStyle="_"
-          typeSpeed={70}
-          deleteSpeed={50}
-          delaySpeed={1500}
-        />
+        Welcome to Scholarship Management System
       </motion.h2>
       <motion.p {...animationValue} className="text-p font-semibold lg:mx-20">
         Scholarship Management System (ScholarMS) is a user-friendly platform
