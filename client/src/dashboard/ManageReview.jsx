@@ -92,7 +92,7 @@ const AllReviews = () => {
                   </p>
                 </div>
               </div>
-              <div className="flex justify-between items-center mt-2 font-semibold">
+              <div className="flex justify-between gap-5 mt-2 font-semibold">
                 <h4>
                   University :{" "}
                   <span className="font-normal">{review?.university_name}</span>

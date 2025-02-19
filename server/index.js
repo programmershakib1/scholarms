@@ -571,7 +571,7 @@ async function run() {
 
     // reviews
     // get all reviews
-    app.get("/reviews", verifyToken, async (req, res) => {
+    app.get("/reviews", async (req, res) => {
       const result = await reviewsCollection.find().toArray();
       res.send(result);
     });

@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import useAxiosSecure from "../hooks/useAxiosSecure";
 import useAuth from "./../hooks/useAuth";
+import no from "../assets/lottie/no.json";
 import {
   BarChart,
   Bar,
@@ -11,6 +12,7 @@ import {
   Tooltip,
   Legend,
 } from "recharts";
+import Lottie from "lottie-react";
 
 const DashboardPage = () => {
   const { user } = useAuth();
@@ -103,7 +105,7 @@ const DashboardPage = () => {
   return (
     <div className="mx-5 md:mx-0">
       <h2 className="text-2xl font-bold">Welcome {user?.displayName}</h2>
-      {userInfo?.role === "admin" && (
+      {userInfo?.role !== "user" && (
         <div className="grid md:grid-cols-3 gap-5 mt-5">
           <div className="border-2 p-8 rounded-xl text-2xl text-center font-row font-bold">
             <h4>All Users</h4>
@@ -152,8 +154,9 @@ const DashboardPage = () => {
           </div>
         </div>
       )}
-      {userInfo?.role === "admin" && (
+      {userInfo?.role !== "user" && (
         <div className="mt-10">
+          <h2 className="my-3 font-bold">All Scholarships</h2>
           <ResponsiveContainer width="100%" height={300}>
             <BarChart
               data={scholarshipsData}
@@ -182,8 +185,9 @@ const DashboardPage = () => {
           </ResponsiveContainer>
         </div>
       )}
-      {userInfo?.role === "user" && (
+      {appliedScholarship.length > 0 && userInfo?.role === "user" && (
         <div className="mt-10">
+          <h2 className="my-3 font-bold">Applied Scholarships</h2>
           <ResponsiveContainer width="100%" height={300}>
             <BarChart
               data={scholarshipData}
@@ -210,6 +214,16 @@ const DashboardPage = () => {
               </Bar>
             </BarChart>
           </ResponsiveContainer>
+        </div>
+      )}
+      {appliedScholarship.length === 0 && userInfo?.role === "user" && (
+        <div>
+          <h2 className="font-bold text-center md:text-left mt-10">
+            Your Applied Scholarship Not Found
+          </h2>
+          <div>
+            <Lottie animationData={no} className="w-full md:h-[400px]"></Lottie>
+          </div>
         </div>
       )}
     </div>

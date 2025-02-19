@@ -3,6 +3,7 @@ import toast from "react-hot-toast";
 import { Helmet } from "react-helmet-async";
 import useAuth from "../../hooks/useAuth";
 import { useRef, useState } from "react";
+import { FiCopy, FiCheck } from "react-icons/fi";
 
 const SignIn = () => {
   const {
@@ -15,6 +16,12 @@ const SignIn = () => {
     setLocations,
   } = useAuth();
   const [loading, setLoading] = useState(false);
+  const [credential, setCredential] = useState(false);
+  const [mCredential, setMCredential] = useState(false);
+  const [adminEmailCopied, setAdminEmailCopied] = useState(false);
+  const [adminPasswordCopied, setAdminPasswordCopied] = useState(false);
+  const [modEmailCopied, setModEmailCopied] = useState(false);
+  const [modPasswordCopied, setModPasswordCopied] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
   const emailRef = useRef();
@@ -56,6 +63,12 @@ const SignIn = () => {
 
   const handleLocations = () => {
     setLocations(location.state);
+  };
+
+  const handleCopy = (text, setCopied) => {
+    navigator.clipboard.writeText(text);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
   };
 
   return (
@@ -163,6 +176,86 @@ const SignIn = () => {
             Github
           </button>
         </div>
+      </div>
+      <div className="mt-10 grid md:grid-cols-2 gap-3 md:gap-10">
+        {credential ? (
+          <div>
+            <p className="flex items-center">
+              <span>Email : admin@gmail.com</span>
+              <span
+                className="ml-2 cursor-pointer"
+                onClick={() =>
+                  handleCopy("admin@gmail.com", setAdminEmailCopied)
+                }
+              >
+                {adminEmailCopied ? (
+                  <FiCheck className="text-green-500" />
+                ) : (
+                  <FiCopy />
+                )}
+              </span>
+            </p>
+            <p className="flex items-center">
+              <span>Password : adminorg</span>
+              <span
+                className="ml-2 cursor-pointer"
+                onClick={() => handleCopy("adminorg", setAdminPasswordCopied)}
+              >
+                {adminPasswordCopied ? (
+                  <FiCheck className="text-green-500" />
+                ) : (
+                  <FiCopy />
+                )}
+              </span>
+            </p>
+          </div>
+        ) : (
+          <button
+            onClick={() => setCredential(true)}
+            className="border-2 border-black px-10 py-2.5 rounded-full font-bold"
+          >
+            admin credential
+          </button>
+        )}
+        {mCredential ? (
+          <div>
+            <p className="flex items-center">
+              <span>Email : moderator@gmail.com</span>
+              <span
+                className="ml-2 cursor-pointer"
+                onClick={() =>
+                  handleCopy("moderator@gmail.com", setModEmailCopied)
+                }
+              >
+                {modEmailCopied ? (
+                  <FiCheck className="text-green-500" />
+                ) : (
+                  <FiCopy />
+                )}
+              </span>
+            </p>
+            <p className="flex items-center">
+              <span>Password : moderatororg</span>
+              <span
+                className="ml-2 cursor-pointer"
+                onClick={() => handleCopy("moderatororg", setModPasswordCopied)}
+              >
+                {modPasswordCopied ? (
+                  <FiCheck className="text-green-500" />
+                ) : (
+                  <FiCopy />
+                )}
+              </span>
+            </p>
+          </div>
+        ) : (
+          <button
+            onClick={() => setMCredential(true)}
+            className="border-2 border-black px-10 py-2.5 rounded-full font-bold"
+          >
+            moderator credential
+          </button>
+        )}
       </div>
     </div>
   );
