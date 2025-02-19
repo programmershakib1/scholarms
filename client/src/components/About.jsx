@@ -36,7 +36,7 @@ const About = () => {
         students and helping institutions support deserving talents efficiently
         and securely.
       </motion.p>
-      <Link to="/allBooks">
+      <Link to="/allScholarships">
         <motion.button
           {...animationValue}
           className="bg-black text-white dark:bg-c py-3 px-8 font-semibold mt-3 font-row rounded-sm"

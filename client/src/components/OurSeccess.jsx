@@ -23,7 +23,7 @@ const OurSuccess = () => {
           <i className="fa-solid fa-user text-7xl"></i>
           <CountUp
             start={0}
-            end={130}
+            end={350}
             duration={20}
             className="text-7xl font-bold py-5"
           />

@@ -50,7 +50,7 @@ const ScholarshipReviews = () => {
             <div className="text-center py-10">
               <div className="flex justify-center">
                 <img
-                  className="w-20 h-20 rounded-full object-cover"
+                  className="w-32 h-32 rounded-full object-cover"
                   src={review.user_image}
                   alt=""
                 />
